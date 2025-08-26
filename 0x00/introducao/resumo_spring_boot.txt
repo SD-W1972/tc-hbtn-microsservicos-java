@@ -1,0 +1,23 @@
+Oque é Spring Boot Framework?
+
+O Spring Boot Framework é o frameworks java mais popular para criação de microsserviços. Foi desenvolvido em 2013 por Rod Johnson, como solução aos problemas que se tinham com Java EE na criação de aplicações do tipo
+
+Quais os benefícios que o Spring Boot fornece?
+
+Servidor embarcado: o spring boot oferece servidores como Tomcat e Jetty integrados automaticamente
+Auto-configuração: não já a necessidade de editar o classpath manualmente, reduzindo assim o código boilerplate
+Integração com banco de dados: suporte nativo para diversos SGBDs
+leveza: pesa apenas 2-5MB
+Flexibilidade: suporta multiplos formatos de comunicação como json, yaml, xml, etc
+
+Como é feita a adição de novas dependências?
+
+Por meio do maven, no arquivo pom.xml
+
+Na sua opinião, qual a melhor IDE para trabalhar com o Spring Boot?
+
+A IDE mais prática para se trabalhar com o spring, na minha opinião, é o STS (Spring Tool Suite), simplesmente por uma questão de praticidade. Tudo funciona "Out of the box", sem estresse. Também é muito semelhante ao eclipse, ao qual muitos desenvolvedores estão acostumados.
+
+O que é Spring Initializr?
+
+O spring initializr é uma ferramenta web que permite criar projetos spring boot de forma rápida e padronizada: ela permite que voce selecione a versão do spring boot, tipo de projeto, linguagem, dependências, starters etc, e depois gera um arquivo zip com as configurações selecionadas para o projeto
