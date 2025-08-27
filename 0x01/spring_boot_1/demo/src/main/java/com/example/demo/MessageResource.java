@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value="/messages")
 public class MessageResource {
 
-    @GetMapping("simpleMessageWelcome")
+    @GetMapping("/simpleMessageWelcome")
     public String simpleMessageWelcome(){
-        return null;
+        return "BEM VINDO A AULA DE MICROSSERVIÇO USANDO SPRING BOOT !!!";
     }
 }
