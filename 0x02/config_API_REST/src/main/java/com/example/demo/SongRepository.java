@@ -15,13 +15,10 @@ public class SongRepository {
     }
 
     public Song getSongById(Integer id){
-        Song song = null;
-        for(Song s : list){
-            if(s.getId() == id){
-                song = s;
-            }
-        }
-        return song;
+        return list.stream()
+                .filter(song -> song.getId().equals(id))
+                .findFirst()
+                .orElse(null);
     }
 
     public void addSong(Song s){
