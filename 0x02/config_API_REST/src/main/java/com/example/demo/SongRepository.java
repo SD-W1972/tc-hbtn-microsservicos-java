@@ -10,6 +10,11 @@ public class SongRepository {
 
     private List<Song> list = new ArrayList<>();
 
+    public SongRepository() {
+        list.add(new Song(1, "Bohemian Rhpasody", "Queen", "A Night at the Opera", "1975"));
+        list.add(new Song(2, "Imagine", "John Lennon", "Imagine", "1971"));
+    }
+
     public List<Song> getAllSongs(){
         return list;
     }
