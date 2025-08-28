@@ -24,5 +24,10 @@ public class SongRepository {
         return song;
     }
 
+    public void addSong(Song s){
+        list.add(s);
+    }
+
+
 
 }
