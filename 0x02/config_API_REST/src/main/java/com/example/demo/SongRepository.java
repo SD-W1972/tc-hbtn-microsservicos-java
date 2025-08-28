@@ -33,4 +33,7 @@ public class SongRepository {
         }
     }
 
+    public void removeSong(Song s){
+        list.remove(s);
+    }
 }
