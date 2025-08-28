@@ -28,6 +28,12 @@ public class SongRepository {
         list.add(s);
     }
 
-
+    public void updateSong(Song s){
+        for(Song so : list){
+            if(so.getId().equals(s.getId())){
+                list.set(s.getId(), s);
+            }
+        }
+    }
 
 }
