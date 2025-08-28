@@ -20,6 +20,19 @@ public class Song {
     }
 
     @Override
+    public boolean equals(Object o) {
+
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return Objects.equals(getId(), song.getId()) && Objects.equals(getNome(), song.getNome()) && Objects.equals(getArtista(), song.getArtista()) && Objects.equals(getAlbum(), song.getAlbum()) && Objects.equals(getAnoLancamento(), song.getAnoLancamento());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getNome(), getArtista(), getAlbum(), getAnoLancamento());
+    }
+
+    @Override
     public String toString() {
         return "Song{" +
                 "id=" + id +
