@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nome": "Bohemian Rhpasody",
+        "nome": "Bohemian Rhapsody",
         "artista": "Queen",
         "album": "A Night at the Opera",
         "anoLancamento": "1975"
