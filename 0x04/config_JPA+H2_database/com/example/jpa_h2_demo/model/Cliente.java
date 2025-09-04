@@ -1,11 +1,10 @@
 package com.example.jpa_h2_demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.UUID;
+import java.util.List;
 
 @Entity
 public class Cliente {
@@ -17,14 +16,18 @@ public class Cliente {
     private int idade;
     private String email;
 
+    @OneToMany
+    private List<Telefone> telefoneList;
+
     public Cliente(String nome, int idade, String email) {
         this.nome = nome;
         this.idade = idade;
         this.email = email;
+        this.telefoneList = new ArrayList<>();
     }
 
     public Cliente(){
-
+        this.telefoneList = new ArrayList<>();
     }
 
     public UUID getId() {
@@ -54,5 +57,16 @@ public class Cliente {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", email='" + email + '\'' +
+                ", telefoneList=" + telefoneList +
+                '}';
     }
 }
