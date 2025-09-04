@@ -3,14 +3,15 @@ package com.example.jpa_h2_demo.model;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
-import java.util.UUID;
+import java.lang.Long;
+
 
 @Entity
 public class Telefone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
     private String DDD;
     private String numero;
 
@@ -27,7 +28,7 @@ public class Telefone {
 
     public Telefone(){}
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 

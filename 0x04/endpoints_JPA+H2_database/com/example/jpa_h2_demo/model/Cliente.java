@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
-import java.util.UUID;
+import java.lang.Long;
 import java.util.List;
 
 @Entity
@@ -12,7 +12,7 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
     private String nome;
     private int idade;
     private String email;
@@ -38,7 +38,7 @@ public class Cliente {
         this.enderecoList = new ArrayList<>();
     }
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 

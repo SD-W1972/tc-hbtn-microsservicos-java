@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ClienteController {
@@ -17,28 +18,47 @@ public class ClienteController {
 
     @PostMapping("/addClient")
     public ResponseEntity<Cliente> addClient(@RequestBody Cliente cliente) {
-
+        Cliente c = clienteRepository.save(cliente);
+        return ResponseEntity.status(HttpStatus.CREATED).body(c);
     }
 
     @GetMapping("/findAllClients")
     public ResponseEntity<List<Cliente>> findAllClients() {
-        // TODO
+        List<Cliente> allClients = clienteRepository.findAll();
+        return (ResponseEntity<List<Cliente>>) ResponseEntity.status(HttpStatus.OK);
     }
 
     @GetMapping("/findClientById/{id}")
     public ResponseEntity<Cliente> findClientById(@PathVariable("id") Long idClient) {
-        // TODO
+        Optional<Cliente> c = clienteRepository.findById(idClient);
+
+        if(c.isPresent()){
+            return ResponseEntity.ok(c.get());
+        }else{
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
     @DeleteMapping("/removeClientById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void removerCliente(@PathVariable("id") Long idClient){
-        // TODO
+        clienteRepository.deleteById(idClient);
     }
 
     @PutMapping("/updateClientById/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void updateCliente(@PathVariable("id") Long id, @RequestBody Cliente cliente){
-        // TODO
+       Optional<Cliente> c = clienteRepository.findById(id);
+
+       if(c.isPresent()){
+           Cliente clientToUpdate = c.get();
+
+           clientToUpdate.setNome(cliente.getNome());
+           clientToUpdate.setEmail(cliente.getEmail());
+           clientToUpdate.setEnderecoList(cliente.getEnderecoList());
+           clientToUpdate.setIdade(cliente.getIdade());
+           clientToUpdate.setTelefoneList(cliente.getTelefoneList());
+
+       }
     }
 }
