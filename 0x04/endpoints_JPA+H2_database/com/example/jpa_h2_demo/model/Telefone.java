@@ -1,12 +1,14 @@
 package com.example.jpa_h2_demo.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 
 import java.lang.Long;
 
 
 @Entity
+@JsonPropertyOrder({"id", "ddd", "numero", "cliente"})
 public class Telefone {
 
     @Id

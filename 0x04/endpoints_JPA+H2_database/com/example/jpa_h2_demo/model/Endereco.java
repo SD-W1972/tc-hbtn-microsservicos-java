@@ -13,7 +13,7 @@ public class Endereco {
     private Long id;
     private String logradouro;
     private String endereco;
-    private int numero;
+    private String numero;
     private String bairro;
     private String cidade;
     private String estado;
@@ -23,7 +23,7 @@ public class Endereco {
     @JsonBackReference
     private Cliente cliente;
 
-    public Endereco(String logradouro, String endereco, int numero, String bairro, String cidade, String estado, Cliente cliente) {
+    public Endereco(String logradouro, String endereco, String numero, String bairro, String cidade, String estado, Cliente cliente) {
         this.logradouro = logradouro;
         this.endereco = endereco;
         this.numero = numero;
@@ -55,11 +55,11 @@ public class Endereco {
         this.endereco = endereco;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
