@@ -11,13 +11,13 @@ public class Telefone {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String DDD;
-    private int numero;
+    private String numero;
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    public Telefone(String DDD, int numero, Cliente cliente) {
+    public Telefone(String DDD, String numero, Cliente cliente) {
         this.DDD = DDD;
         this.numero = numero;
         this.cliente = cliente;
@@ -37,11 +37,11 @@ public class Telefone {
         this.DDD = DDD;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
