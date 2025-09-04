@@ -4,14 +4,14 @@
         "nome": "Ze Fulano",
         "idade": 40,
         "email": "zezinho@email.com",
-        "telefoneList": [
+        "telefones": [
             {
                 "id": 3,
                 "numero": "98253636",
                 "ddd": "18"
             }
         ],
-        "enderecoList": [
+        "enderecos": [
             {
                 "id": 1,
                 "logradouro": "AVENIDA",
@@ -28,7 +28,7 @@
         "nome": "Manoel Antunes",
         "idade": 26,
         "email": "manoel@email.com",
-        "telefoneList": [
+        "telefones": [
             {
                 "id": 1,
                 "numero": "35445585",
@@ -40,7 +40,7 @@
                 "ddd": "14"
             }
         ],
-        "enderecoList": [
+        "enderecos": [
             {
                 "id": 2,
                 "logradouro": "RUA",

@@ -19,23 +19,23 @@ public class Cliente {
 
     @OneToMany(mappedBy = "cliente")
     @JsonManagedReference
-    private List<Telefone> telefoneList;
+    private List<Telefone> telefones;
 
     @OneToMany(mappedBy = "cliente")
     @JsonManagedReference
-    private  List<Endereco> enderecoList;
+    private  List<Endereco> enderecos;
 
     public Cliente(String nome, int idade, String email) {
         this.nome = nome;
         this.idade = idade;
         this.email = email;
-        this.telefoneList = new ArrayList<>();
-        this.enderecoList = new ArrayList<>();
+        this.telefones = new ArrayList<>();
+        this.enderecos = new ArrayList<>();
     }
 
     public Cliente(){
-        this.telefoneList = new ArrayList<>();
-        this.enderecoList = new ArrayList<>();
+        this.telefones = new ArrayList<>();
+        this.enderecos = new ArrayList<>();
     }
 
     public Long getId() {
@@ -43,11 +43,11 @@ public class Cliente {
     }
 
     public List<Endereco> getEnderecoList() {
-        return enderecoList;
+        return enderecos;
     }
 
-    public void setEnderecoList(List<Endereco> enderecoList) {
-        this.enderecoList = enderecoList;
+    public void setEnderecoList(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 
     public String getNome() {
@@ -75,11 +75,11 @@ public class Cliente {
     }
 
     public List<Telefone> getTelefoneList() {
-        return telefoneList;
+        return telefones;
     }
 
-    public void setTelefoneList(List<Telefone> telefoneList) {
-        this.telefoneList = telefoneList;
+    public void setTelefoneList(List<Telefone> telefones) {
+        this.telefones = telefones;
     }
 
     @Override
@@ -89,8 +89,8 @@ public class Cliente {
                 ", nome='" + nome + '\'' +
                 ", idade=" + idade +
                 ", email='" + email + '\'' +
-                ", telefoneList=" + telefoneList +
-                ", enderecoList=" + enderecoList +
+                ", telefones=" + telefones +
+                ", enderecos=" + enderecos +
                 '}';
     }
 }
