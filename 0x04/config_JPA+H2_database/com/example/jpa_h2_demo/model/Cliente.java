@@ -16,10 +16,10 @@ public class Cliente {
     private int idade;
     private String email;
 
-    @OneToMany
+    @OneToMany(mappedBy = "cliente")
     private List<Telefone> telefoneList;
 
-    @OneToMany
+    @OneToMany(mappedBy = "cliente")
     private  List<Endereco> enderecoList;
 
     public Cliente(String nome, int idade, String email) {
