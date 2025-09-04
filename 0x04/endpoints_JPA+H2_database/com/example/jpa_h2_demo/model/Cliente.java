@@ -42,11 +42,11 @@ public class Cliente {
         return id;
     }
 
-    public List<Endereco> getEnderecoList() {
+    public List<Endereco> getEnderecos() {
         return enderecos;
     }
 
-    public void setEnderecoList(List<Endereco> enderecos) {
+    public void setEnderecos(List<Endereco> enderecos) {
         this.enderecos = enderecos;
     }
 
@@ -74,11 +74,11 @@ public class Cliente {
         this.email = email;
     }
 
-    public List<Telefone> getTelefoneList() {
+    public List<Telefone> getTelefones() {
         return telefones;
     }
 
-    public void setTelefoneList(List<Telefone> telefones) {
+    public void setTelefones(List<Telefone> telefones) {
         this.telefones = telefones;
     }
 

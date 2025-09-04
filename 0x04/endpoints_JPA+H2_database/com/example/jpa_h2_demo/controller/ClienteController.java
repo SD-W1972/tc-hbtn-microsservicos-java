@@ -55,9 +55,9 @@ public class ClienteController {
 
            clientToUpdate.setNome(cliente.getNome());
            clientToUpdate.setEmail(cliente.getEmail());
-           clientToUpdate.setEnderecoList(cliente.getEnderecoList());
+           clientToUpdate.setEnderecos(cliente.getEnderecos());
            clientToUpdate.setIdade(cliente.getIdade());
-           clientToUpdate.setTelefoneList(cliente.getTelefoneList());
+           clientToUpdate.setTelefones(cliente.getTelefones());
 
        }
     }
