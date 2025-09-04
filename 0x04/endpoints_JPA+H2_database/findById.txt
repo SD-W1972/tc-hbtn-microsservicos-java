@@ -3,7 +3,7 @@
     "nome": "Manoel Antunes",
     "idade": 26,
     "email": "manoel@email.com",
-    "telefoneList": [
+    "telefones": [
         {
             "id": 1,
             "numero": "35445585",
@@ -15,7 +15,7 @@
             "ddd": "14"
         }
     ],
-    "enderecoList": [
+    "enderecos": [
         {
             "id": 2,
             "logradouro": "RUA",

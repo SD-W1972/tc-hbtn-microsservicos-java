@@ -22,14 +22,14 @@
                 "estado": "SP"
             }
         ],
-        "telefoneList": [
+        "telefones": [
             {
                 "id": 3,
                 "ddd": "18",
                 "numero": "98253636"
             }
         ],
-        "enderecoList": [
+        "enderecos": [
             {
                 "id": 1,
                 "logradouro": "AVENIDA",
@@ -69,7 +69,7 @@
                 "estado": "SP"
             }
         ],
-        "telefoneList": [
+        "telefones": [
             {
                 "id": 1,
                 "ddd": "14",
@@ -81,7 +81,7 @@
                 "numero": "99668855"
             }
         ],
-        "enderecoList": [
+        "enderecos": [
             {
                 "id": 2,
                 "logradouro": "RUA",
