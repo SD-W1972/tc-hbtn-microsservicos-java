@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>jpa-h2-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jpa-h2-demo</name>
+	<name>config_JPA+H2_database</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
