@@ -1,14 +1,14 @@
 package com.example.jpa_h2_demo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.UUID;
 
 @Entity
 public class Endereco {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
     private String logradouro;
     private String endereco;
