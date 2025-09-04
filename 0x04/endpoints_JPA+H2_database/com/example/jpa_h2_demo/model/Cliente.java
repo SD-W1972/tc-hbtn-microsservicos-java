@@ -1,5 +1,6 @@
 package com.example.jpa_h2_demo.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -17,9 +18,11 @@ public class Cliente {
     private String email;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonManagedReference
     private List<Telefone> telefoneList;
 
     @OneToMany(mappedBy = "cliente")
+    @JsonManagedReference
     private  List<Endereco> enderecoList;
 
     public Cliente(String nome, int idade, String email) {
