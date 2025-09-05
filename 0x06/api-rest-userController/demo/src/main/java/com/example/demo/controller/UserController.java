@@ -22,11 +22,11 @@ public class UserController {
     }
 
     @GetMapping("/user-name/{userName}")
-    public String findUserByName(@PathVariable String name){
-        if(name.length() > 3 && name.length() < 15){
+    public String findUserByName(@PathVariable String userName){
+        if(userName.length() > 3 && userName.length() < 15){
             return "You have entered valid USERNAME";
         }else{
-            throw new UserNameException(name);
+            throw new UserNameException(userName);
         }
 
     }
