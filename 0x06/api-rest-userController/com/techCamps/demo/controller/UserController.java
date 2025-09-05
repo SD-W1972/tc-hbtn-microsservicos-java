@@ -21,5 +21,10 @@ public class UserController {
         return "You have entered invalid USERNAME";
     }
 
-
+    public String findUserByCPF(String cpf){
+        if(cpf.length() > 3 && cpf.length() < 15){
+            return "You have entered valid CPF";
+        }
+        return "You have entered invalid CPF";
+    }
 }
