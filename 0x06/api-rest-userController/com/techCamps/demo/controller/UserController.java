@@ -14,5 +14,12 @@ public class UserController {
         return "You have entered invalid ID";
     }
 
+    public String findUserByName(String name){
+        if(name.length() > 3 && name.length() < 15){
+            return "You have entered valid USERNAME";
+        }
+        return "You have entered invalid USERNAME";
+    }
+
 
 }
