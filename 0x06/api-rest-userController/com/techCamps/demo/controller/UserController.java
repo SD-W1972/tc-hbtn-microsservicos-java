@@ -25,10 +25,18 @@ public class UserController {
         return "You have entered invalid USERNAME";
     }
 
-    public String findUserByCPF(String cpf){
-        if(cpf.length() > 3 && cpf.length() < 15){
-            return "You have entered valid CPF";
+    @GetMapping("/user-cpf/{cpf}")
+    public String findUserByCPF(@PathVariable String cpf){
+        boolean isCPFValid = isCPF(cpf);
+
+        return isCPFValid == true ? "You have entered valid CPF" : "You have entered invalid CPF";
+    }
+
+    public boolean isCPF(String CPF) {
+        if(CPF.length() > 3 && CPF.length() < 15){
+            return true;
         }
-        return "You have entered invalid CPF";
+        return false;
+
     }
 }
