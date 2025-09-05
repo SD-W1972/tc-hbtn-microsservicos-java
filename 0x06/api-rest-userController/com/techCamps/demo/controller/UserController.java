@@ -17,7 +17,8 @@ public class UserController {
         return "You have entered invalid ID";
     }
 
-    public String findUserByName(String name){
+    @GetMapping("/user-name/{userName}")
+    public String findUserByName(@PathVariable String name){
         if(name.length() > 3 && name.length() < 15){
             return "You have entered valid USERNAME";
         }
