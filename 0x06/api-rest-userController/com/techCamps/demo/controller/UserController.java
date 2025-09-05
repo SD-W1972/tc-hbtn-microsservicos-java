@@ -1,5 +1,8 @@
 package com.techCamps.demo.controller;
 
+import com.techCamps.demo.exception.CPFException;
+import com.techCamps.demo.exception.UserIdException;
+import com.techCamps.demo.exception.UserNameException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,23 +16,29 @@ public class UserController {
     public String findUserById(@PathVariable int id){
         if(id > 0 && id < 100){
             return "You have entered valid ID";
+        }else {
+            throw new UserIdException(String.valueOf(id));
         }
-        return "You have entered invalid ID";
     }
 
     @GetMapping("/user-name/{userName}")
     public String findUserByName(@PathVariable String name){
         if(name.length() > 3 && name.length() < 15){
             return "You have entered valid USERNAME";
+        }else{
+            throw new UserNameException(name);
         }
-        return "You have entered invalid USERNAME";
+
     }
 
     @GetMapping("/user-cpf/{cpf}")
     public String findUserByCPF(@PathVariable String cpf){
         boolean isCPFValid = isCPF(cpf);
+        if (isCPF(cpf)) {
+            return "You have entered valid CPF";
+        }
+        throw new CPFException(cpf);
 
-        return isCPFValid == true ? "You have entered valid CPF" : "You have entered invalid CPF";
     }
 
     public boolean isCPF(String CPF) {
