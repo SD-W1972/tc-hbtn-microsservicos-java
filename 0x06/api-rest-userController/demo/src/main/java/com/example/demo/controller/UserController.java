@@ -1,8 +1,8 @@
-package com.techCamps.demo.controller;
+package com.example.demo.controller;
 
-import com.techCamps.demo.exception.CPFException;
-import com.techCamps.demo.exception.UserIdException;
-import com.techCamps.demo.exception.UserNameException;
+import com.example.demo.exception.CPFException;
+import com.example.demo.exception.UserIdException;
+import com.example.demo.exception.UserNameException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

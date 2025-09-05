@@ -1,4 +1,4 @@
-package com.techCamps.demo.exception;
+package com.example.demo.exception;
 
 public class CPFException extends RuntimeException{
     public CPFException(String message){
