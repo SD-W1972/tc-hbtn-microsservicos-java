@@ -42,7 +42,7 @@ public class UserController {
     }
 
     public boolean isCPF(String CPF) {
-        if(CPF.length() > 3 && CPF.length() < 15){
+        if(CPF.length() > 3 && CPF.length() < 11){
             return true;
         }
         return false;
