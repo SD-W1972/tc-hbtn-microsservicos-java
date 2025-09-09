@@ -1,5 +1,8 @@
 package com.example.calculator.model;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Calculator {
     public Double sum(Double number1, Double number2) {
         if(number1 == null || number2 == null){
@@ -35,13 +38,18 @@ public class Calculator {
         return start;
     }
 
-
-    // Exemplos:
-    // Integer = 1 -> Binary = 1
-    // Integer = 5 -> Binary = 101
-    // Integer = 20 -> Binary = 10100
     public Integer integerToBinary(Integer integer) {
-        // TODO
+        int[] binary = new int[35];
+        int i = 0;
+        while(integer > 0){
+            binary[i++] = integer % 2;
+            integer = integer /2;
+        }
+        int result = 0;
+        for(int d : binary){
+            result += d * 10;
+        }
+        return result;
     }
 
     // Exemplos:
@@ -49,7 +57,8 @@ public class Calculator {
     // Integer = 5 -> Hexadecimal = "37"
     // Integer = 170 -> Binary = "AA"
     public String integerToHexadecimal(Integer integer) {
-        // TODO
+        String result = String.format("%X", integer);
+        return result;
     }
 
     // Exemplos
@@ -57,7 +66,7 @@ public class Calculator {
     // Date 2 = LocalDate.of(2020, 3, 29)
     // Total de dias = 14
     public int calculeDayBetweenDate(LocalDate date1, LocalDate date2) {
-        // TODO
+       return (int) ChronoUnit.DAYS.between(date1, date2);
     }
 
 }
