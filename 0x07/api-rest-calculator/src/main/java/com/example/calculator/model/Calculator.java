@@ -2,25 +2,39 @@ package com.example.calculator.model;
 
 public class Calculator {
     public Double sum(Double number1, Double number2) {
-        // TODO
-        // validação -> throw new NullPointerException("Número 1 e número 2 são obrigatórios.");
+        if(number1 == null || number2 == null){
+            throw new NullPointerException("Número 1 e número 2 são obrigatórios.");
+        }
+        return number1 + number2;
     }
 
     public Double sub(Double number1, Double number2) {
-        // TODO
-        // validação -> throw new NullPointerException("Número 1 e número 2 são obrigatórios.");
+        if(number1 == null || number2 == null){
+            throw new NullPointerException("Número 1 e número 2 são obrigatórios.");
+        }
+        return number1 - number2;
     }
 
     public Double divide (Double number1, Double number2)  {
-        // TODO
-        // validação -> throw new NullPointerException("Número 1 e número 2 são obrigatórios.");
-        // validação -> throw new ArithmeticException("Divisão por zero não é permitido.");
+        if(number1 == null || number2 == null){
+            throw new NullPointerException("Número 1 e número 2 são obrigatórios.");
+        }else if(number1 == 0 || number2 == 0){
+            throw new ArithmeticException("Divisão por zero não é permitido.");
+        }
+        return number1 / number2;
     }
 
     public Integer factorial(Integer factorial) {
-        // TODO
-        // validação -> throw new NullPointerException("Número é obrigatório.");
+        if(factorial == null){
+            throw new NullPointerException("Número é obrigatório.");
+        }
+        int start = 1;
+        for(int i = 2; i <= factorial; i++){
+            start *= i;
+        }
+        return start;
     }
+
 
     // Exemplos:
     // Integer = 1 -> Binary = 1
