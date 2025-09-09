@@ -15,7 +15,7 @@ public class Calculator {
         if(number1 == null || number2 == null){
             throw new NullPointerException("Número 1 e número 2 são obrigatórios.");
         }
-        return number1 - number2;
+        return number2 - number1;
     }
 
     public Double divide (Double number1, Double number2)  {
@@ -39,17 +39,18 @@ public class Calculator {
     }
 
     public Integer integerToBinary(Integer integer) {
-        int[] binary = new int[35];
-        int i = 0;
-        while(integer > 0){
-            binary[i++] = integer % 2;
-            integer = integer /2;
+        if (integer == 0) return 0;
+
+        StringBuilder binary = new StringBuilder();
+        int num = integer;
+
+        while (num > 0) {
+            binary.append(num % 2);
+            num = num / 2;
         }
-        int result = 0;
-        for(int d : binary){
-            result += d * 10;
-        }
-        return result;
+
+        // Reverse to get correct binary representation
+        return Integer.parseInt(binary.reverse().toString());
     }
 
     // Exemplos:
