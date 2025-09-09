@@ -37,4 +37,59 @@ public class CalculatorControllerTest {
 
     // TODO - Implementar os demais métodos: subNumbers, divideNumbers, factorial,
     //        calculeDayBetweenDate, integerToBinary e integerToHexadecimal
+
+    @Test
+    void subNumbers()throws Exception{
+        RequestBuilder request = get("/calculator/subNumbers")
+                .param("number1", "10.0")
+                .param("number2", "10.0");
+
+        MvcResult result = mvc.perform(request).andReturn();
+        assertEquals("0.0", result.getResponse().getContentAsString());
+    }
+
+    @Test
+    void divideNumbers()throws Exception{
+        RequestBuilder request = get("/calculator/divideNumbers")
+                .param("number1", "25.0")
+                .param("number2", "5.0");
+
+        MvcResult result = mvc.perform(request).andReturn();
+        assertEquals("5.0", result.getResponse().getContentAsString());
+    }
+
+    @Test
+    void factorial()throws Exception{
+        RequestBuilder request = get("/calculator/factorial")
+                .param("factorial", "5");
+        MvcResult result = mvc.perform(request).andReturn();
+        assertEquals("120", result.getResponse().getContentAsString());
+    }
+
+        @Test
+        void calculeDayBetweenDate() throws Exception {
+            RequestBuilder request = get("/calculator/calculeDayBetweenDate")
+                    .param("localDate1", "2020-03-15")
+                    .param("localDate2", "2020-03-29");
+            MvcResult result = mvc.perform(request).andReturn();
+            assertEquals("14", result.getResponse().getContentAsString());
+        }
+
+        @Test
+        void integerToBinary() throws Exception {
+            RequestBuilder request = get("/calculator/integerToBinary")
+                    .param("number1", "5");
+            MvcResult result = mvc.perform(request).andReturn();
+            assertEquals("101", result.getResponse().getContentAsString());
+        }
+
+        @Test
+        void integerToHexadecimal() throws Exception {
+            RequestBuilder request = get("/calculator/integerToHexadecimal")
+                    .param("number1", "20");
+            MvcResult result = mvc.perform(request).andReturn();
+            assertEquals("14", result.getResponse().getContentAsString());
+    }
+
 }
+

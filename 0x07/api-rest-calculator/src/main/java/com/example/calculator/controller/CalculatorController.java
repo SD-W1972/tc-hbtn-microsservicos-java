@@ -17,7 +17,7 @@ public class CalculatorController {
 
     @GetMapping("/welcome")
     public String messageWelcome() {
-        return "Bem vindo";
+        return "Bem vindo à CALCULATOR API REST.";
     }
 
     @GetMapping("/addNumbers")
